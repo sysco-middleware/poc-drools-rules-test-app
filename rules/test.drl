@@ -1,0 +1,74 @@
+package no.sysco.middleware
+
+//import section as in java
+import java.util.Map;  
+import java.util.Map.Entry; 
+
+//we can define our function 
+function void print(String txt) {
+   System.out.println(txt);
+}
+
+//rules start
+rule "Geodata presented"
+    when
+    $component : Component(
+        (metadata.containsKey("Latitude") && metadata.containsKey("Longitude")) ||
+        (metadata.containsKey("lat") && metadata.containsKey("lng"))            ||
+        (metadata.containsKey("Coordinate X") && metadata.containsKey("Coordinate Y"))
+    )
+    then
+        $component.messages.add("Geodata presented");
+end
+
+       
+rule "Type check"
+    when 
+        $component : Component(type not in ("METER", "GENERIC"))
+    then
+        $component.messages.add("Type not allowed");
+end
+
+rule "ID-Type check"
+    when 
+        $component : Component(
+            (type == "GENERIC" && id matches "^11.*$") ||
+            (type == "METER" && id matches "^22.*$")
+        )
+    then
+        $component.messages.add("id-type ok");
+end
+
+rule "ID-Type not allowed check"
+    when 
+        $component : Component(
+            (type == "GENERIC" && id not matches "^11.*$") ||
+            (type == "METER" && id not matches "^22.*$")
+        )
+    then
+        print($component.id + " not matches with type " + $component.type);
+        $component.messages.add("id-type not ok");
+end
+
+
+rule "iterate metadata map"
+    when
+        component : Component($metadata: metadata)
+        entry : Entry() from $metadata.entrySet()
+        key : String() from entry.getKey()
+        Boolean(booleanValue == true) from key soundslike  "latitude"
+    then
+        component.messages.add("Found something looks like latitude: "+key);
+end
+
+rule "Convert date"
+    when
+        component : Component($metadata: metadata)
+        entry : Entry() from $metadata.entrySet()
+        key : String() from entry.getKey()
+        value: String() from entry.getValue()
+        Boolean(booleanValue == true) from key soundslike  "installed"
+    then
+        $metadata.put(key, DateUtils.convertDateFormat(value));
+        print("Date found" + value);
+end

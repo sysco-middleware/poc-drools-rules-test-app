@@ -1,0 +1,107 @@
+[
+    {
+        "name": " Adventurous GENERIC",
+        "type": "GENERIC",
+        "metadata": {
+            "installed": "18.04.1985"
+        },
+        "id": "11214961551"
+    }, {
+        "name": "Lively GENERIC",
+        "type": "GENERIC",
+        "metadata": {
+            "installed": "16-03-1983",
+            "Latitude": "58,263482",
+            "Longitude": "8,140976"
+        },
+        "id": "11.2.1496.1673",
+
+        "images": null,
+        "owner": null
+    }, {
+        "name": " Impressive GENERIC",
+        "type": "GENERIC",
+        "metadata": {
+            "installed": "21/05/1989",
+            "Latitude": "59,459922",
+            "Longitude": "10,248769"
+        },
+        "id": "12.2.1776.1777",
+        "images": null,
+        "owner": null
+    }, {
+        "name": " Tenacious GENERIC",
+        "type": "GENERIC",
+        "metadata": {
+            "installed": "1988-05-16",
+            "Latitude": "58,318724",
+            "Longitude": "6,958845"
+        },
+        "id": "11.2.1776.1901",
+        "images": null,
+        "owner": null
+    }, {
+        "name": "Gallant GENERIC",
+        "type": "GENERIC",
+        "metadata": {},
+        "id": "13.2.1776.1973",
+        "images": null,
+        "owner": null
+    }, {
+        "name": " Optimistic GENERIC",
+        "type": "GENERIC",
+        "metadata": {},
+        "id": "11.2.1776.1901",
+        "images": null,
+        "owner": null
+    }, {
+        "name": "Sweet METER",
+        "type": "METER",
+        "metadata": {
+            "installed": 1531462707561,
+            "Måler Id": "-1394406301",
+            "Latitude": "61,555054",
+            "Longitude": "10,276750"
+        },
+        "id": "221.2.1776",
+        "images": null,
+        "owner": null
+    }, {
+        "name": " Emotional METER",
+        "type": "METER",
+        "metadata": {
+            "Antennetype": "INTEGRATED",
+            "Antennemodell": "Internal",
+            "Måler Id": "1583835613",
+            "Latitude": "65,327131",
+            "Longitude": "6,807186"
+        },
+        "id": "21.2.1776",
+        "images": null,
+        "owner": null
+    }, {
+        "name": " Efficacious GENERIC",
+        "type": "GENERIC",
+        "metadata": {
+            "Latitude": "64,497891",
+            "Longitude": "9,350219"
+        },
+        "id": "11.2.1776.2023",
+        "images": null,
+        "owner": null
+    }, {
+        "name": " Cool METER POINT",
+        "type": "METER POINT",
+        "metadata": {
+            "Antennetype": "EXTERN",
+            "Antennemodell": "Internal",
+            "Måler Id": "-2098659002",
+            "Latitude": "65,047338",
+            "Longitude": "6,878565"
+        },
+        "id": "1.2.1776",
+        "images": null,
+        "owner": null
+    }
+
+]
